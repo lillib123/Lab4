@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="lab4_module">
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+
+  <form ng-controller="lab4_controller as controller">
+    <h1>TODO List</h1>
+    <h2>A place to store the things you have to do!</h2>
+    <input ng-model="filter" type="text" placeholder="Search List"></input>
+
+    <ol>
+      <li ng-repeat="number in controller.list | filter:filter">{{number}} <a ng-click="controller.remove_item($index)" href=""><img src = "images/close.png"></a> </li>
+    </ol>
+    <input ng-model="add_items" type="text" placeholder="Item to Add"></input>
+
+    <button ng-click="controller.add_item(add_items)">Add</button>
+  </form>
+
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+  <script src="module.js"></script>
+  <script src="controller.js"></script>
+</body>
+</html>
