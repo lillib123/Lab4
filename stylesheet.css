@@ -65,7 +65,7 @@ img {
 
 li {
   text-align: left;
-  margin-left: 0;
+  margin-left: 5px;
 }
 @keyframes appear {
   from {
@@ -80,7 +80,25 @@ li {
   animation: 1s appear;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 425px) {
+  h1 {
+    padding-left: 25px;
+  }
+
+  h2 {
+    padding-left: 25px;
+  }
+
+  img {
+    margin-right: 10%;
+  }
+
+  li {
+    margin-left: 5px;
+  }
+}
+
+@media only screen and (min-width: 740px) {
   body{
     width: 1440px;
     max-height: 500px;
@@ -101,11 +119,11 @@ li {
   }
 
 h1 {
-  margin-left: 15px;
+  margin-left: 5px;
 }
 
 h2 {
-  margin-left: 18px;
+  margin-left: 7px;
 }
 
   li {
