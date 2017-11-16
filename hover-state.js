@@ -7,13 +7,13 @@
         $element.on("mouseenter", function() {
           $scope.$apply(function() {
             $element.css("background-color", "#ff5858");
-            $element.css("transition", "0.5s ease");
+            $element.css("transition", "0.3s ease");
           });
         });
         $element.on("mouseleave", function() {
           $scope.$apply(function() {
             $element.css("background-color", "pink");
-            $element.css("transition", "0.5s ease");
+            $element.css("transition", "0.3s ease");
           });
         });
       }
