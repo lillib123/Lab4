@@ -4,7 +4,8 @@
     vm.list = ["Grovery Shop", "Laundry", "Get Gas", "Vacuum"];
 
     vm.add_item = function(item) {
-      vm.list.push(item);
+    vm.list.push(item);
+    vm.add_items = "";
     };
 
     vm.remove_item = function(item) {

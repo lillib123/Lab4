@@ -9,6 +9,7 @@
 <body>
 
   <form ng-controller="lab4_controller as controller">
+    <div task-form></div>
     <h1>TODO List</h1>
     <h2>A place to store the things you have to do!</h2>
     <input ng-model="filter" type="text" placeholder="Search List"></input>
@@ -16,13 +17,15 @@
     <ol>
       <li ng-repeat="number in controller.list | filter:filter track by $index">{{number}} <a ng-click="controller.remove_item($index)" href=""><img src = "images/close.png"></a> </li>
     </ol>
-    <input ng-model="add_items" type="text" placeholder="Item to Add"></input>
+    <input ng-model="controller.add_items" type="text" placeholder="Item to Add"></input>
 
-    <button ng-click="controller.add_item(add_items)">Add</button>
+    <button hover-state ng-click="controller.add_item(controller.add_items)">Add</button>
   </form>
 
   <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
   <script src="module.js"></script>
   <script src="controller.js"></script>
+  <script src="task-form.js"></script>
+  <script src="hover-state.js"></script>
 </body>
 </html>
