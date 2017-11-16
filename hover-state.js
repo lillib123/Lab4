@@ -6,13 +6,13 @@
       link: function($scope, $element, $attrs) {
         $element.on("mouseenter", function() {
           $scope.$apply(function() {
-            $element.css("background-color", "#ff5858");
+            $element.css("background-color", "pink");
             $element.css("transition", "0.3s ease");
           });
         });
         $element.on("mouseleave", function() {
           $scope.$apply(function() {
-            $element.css("background-color", "pink");
+            $element.css("background-color", "white");
             $element.css("transition", "0.3s ease");
           });
         });
